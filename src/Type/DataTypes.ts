@@ -47,7 +47,7 @@ function demo() : never{
 */
 // 元组 特殊数组类型 固定数组元素的数量和类型
 let turple1 : [string,number]
-// 限定两种类型的元组
+// 仅限定类型的元组类型
 let turple2 : [...string[]]
 /* enum */
 // 定义枚举类型 整型枚举
@@ -94,3 +94,9 @@ function getStatus(status : Status){
 /*
 * interface
 * */
+
+// 泛型 T 用于定义函数 接口 或者类型 能让一段代码适用于多种类型 同时任然保持类型安全性
+// 泛型使用什么字母可以自己定义
+function Data<T,U>(data:T,info:U):T{
+    return data;
+}
