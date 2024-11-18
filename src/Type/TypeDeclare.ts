@@ -21,7 +21,7 @@ function count(x : number, y : number) : number{
 // 定义一个函数声明 接收两个整数返回一个整数
 let counts : (x : number, y : number) => number;
 
-// 字面量类型 声明的变量仅能存储被预定义的值 相当于枚举
+// 字面量类型 声明的变量仅能存储被预定义的值 类似于枚举
 let limitType : 1 | 2 | 3;
 // limitType = 5
 

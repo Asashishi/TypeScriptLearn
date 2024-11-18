@@ -1,12 +1,17 @@
 // 创建类
 class Hito{
-    name:string;
-    age:number;
-    // 默认值实现类似无参够造
-    constructor(name:string = "", age:number = 0){
-        this.name=name;
-        this.age=age;
+
+    // 实现任意参数的构造函数
+
+    name: string | undefined;
+    age: number | undefined;
+
+    // 使用三目运算实现任意参数的构造
+    constructor(name? :string, age? :number){
+        name ? this.name = name : null;
+        age ? this.age = age : null;
     }
+
     // 简写够造器 不用在类中声明属性 在够造函数中声明即可
     // constructor(public name:string, public age:number){}
     info(){
@@ -20,10 +25,10 @@ hito.info();
 // 类继承
 class Gakuse extends Hito{
     static identity : "Gakuse" = "Gakuse";
+    // 简写构造器
     constructor(name:string, age:number){
         super(name, age); // 使用父类属性作为属性 不用单独声明
     }
-    // 简写构造器
     // 多态
     override info(){
         super.info();
